@@ -1,0 +1,7 @@
+{
+  "name": "bosi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

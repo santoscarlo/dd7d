@@ -1,0 +1,41 @@
+<ion-app>
+
+  <ion-app>
+    <ion-menu menuId="main-menu" content-id="main">
+  
+  
+  
+      <ion-content>
+        <div class="menu-header-bg"> </div>
+        <div class="header-content">
+          <img src="../assets/resources/avatar.jpg" alt="">
+          <ion-label>
+            <h2>DD 7D</h2>
+            <p></p>
+          </ion-label>
+        </div>
+        <div class="action-button">
+          <ion-menu-toggle>
+            <ion-button routerLink="/home">
+              <ion-icon name="basketball-outline"></ion-icon>POPULAR
+            </ion-button>
+          </ion-menu-toggle>
+        </div>
+  
+          <ion-list class="menu-items" lines="none">
+            <ion-menu-toggle>
+              <ion-item routerLink="/viewproduct">
+                <ion-icon name="videocam-outline"></ion-icon>STREAM
+              </ion-item>
+            </ion-menu-toggle>
+  
+            <ion-menu-toggle>
+              <ion-item routerLink="/cater">
+                <ion-icon name="folder-outline"></ion-icon>ARTICLES
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+      </ion-content>
+    </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

@@ -1,0 +1,514 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    
+    <ion-item lines="none">
+      <!-- <ion-avatar slot="end">
+        <img src="../assets/resources/avatar.jpg">
+      </ion-avatar> -->
+      <ion-buttons slot="end">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+      </ion-buttons>
+      <ion-label>
+        <h2>DD7D</h2>
+        <p>SPORTS NEWS</p>
+      </ion-label>
+  
+      
+    </ion-item>
+    <!-- <ion-item>
+      <ion-segment (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="friends">
+          <ion-label>STREAM</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="enemies">
+          <ion-label>ARTICLES</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-item> -->
+  </ion-toolbar>
+  
+
+ 
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+
+<div class="ion-padding wrapper">
+
+  <ion-searchbar (ionInput)="filterProductData($event)" style=""></ion-searchbar>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row class="ion-align-items-baseline">
+      <ion-col size="6">
+        <h4 class="title">
+          Popular Sports
+        </h4>
+      </ion-col>
+      <ion-col size="6">
+        <h4 class="more ion-text-end">
+          
+        </h4>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  </div>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides [options]="options">
+
+          <ion-slide *ngFor="let arti of artik">
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <h1 style="display: none;">{{arti.id}}</h1>
+                  <!-- <ion-img src="../assets/resources/popularsports/d.jpg"></ion-img> -->
+                  <ion-img src="{{arti.imageUrl}}"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">{{arti.title}}</ion-card-title>
+                <ion-card-subtitle>{{arti.description}}</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <!-- <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="../assets/resources/popularsports/cricket.jpg"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Cricket</ion-card-title>
+                <ion-card-subtitle>Cricket is the number 2 famous sport in the world, the total estimated fans are <b>2.5 Billion Fans</b></ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="../assets/resources/popularsports/bask.jpg"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Basketball</ion-card-title>
+                <ion-card-subtitle>Cricket is the number 3 famous sport in the world, the total estimated fans are <b>2.2 Billion Fans</b></ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="../assets/resources/popularsports/fieldhock.jpg"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Field Hockey</ion-card-title>
+                <ion-card-subtitle>Cricket is the number 4 famous sport in the world, the total estimated fans are <b>2 Billion Fans</b></ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="../assets/resources/popularsports/tennis.jpg"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Tennis</ion-card-title>
+                <ion-card-subtitle>Cricket is the number 3 famous sport in the world, the total estimated fans are <b>1 Billion Fans</b></ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+
+          
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="../assets/resources/popularsports/volleyball.jpg"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Volleyball</ion-card-title>
+                <ion-card-subtitle>Volleyball is the number 6 famous sport in the world, the total estimated fans are <b>900 Million Fans</b></ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="../assets/resources/popularsports/tabletennis.jpg"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Table Tennis</ion-card-title>
+                <ion-card-subtitle>Table Tennis is the number 7 famous sport in the world, the total estimated fans are <b>850 Million Fans</b></ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="../assets/resources/popularsports/baseball.jpg"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Baseball</ion-card-title>
+                <ion-card-subtitle>Baseball is the number 8 famous sport in the world, the total estimated fans are <b>500 Million Fans</b></ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="../assets/resources/popularsports/americal.jpg"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Americal Football Rugby</ion-card-title>
+                <ion-card-subtitle>Americal Football Rugby is the number 9 famous sport in the world, the total estimated fans are <b>410 Million Fans</b></ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="../assets/resources/popularsports/gold.jpg"></ion-img>
+                </div>
+                
+                <ion-card-title class="title">Volleyball</ion-card-title>
+                <ion-card-subtitle>Golf is the number 10 famous sport in the world, the total estimated fans are <b>390 Million Fans</b></ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide> -->
+
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <div class="ion-padding-horizontal wrapper">
+  
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="6">
+          <h4 class="title">
+            DD 7D Article
+          </h4>
+        </ion-col>
+        <ion-col size="6">
+          <h4 class="more ion-text-end">
+            <!-- Show more -->
+          </h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    </div>
+  
+    <ion-grid class="ion-no-padding">
+      <ion-row>
+        <ion-col size="12">
+          <ion-slides [options]="options1">
+
+            <ion-slide *ngFor="let article of articles">
+              <ion-card class="card" >
+                <ion-card-content class="ion-text-left">
+  
+                  <div class="img-wrapper">
+                    <ion-img src="{{article.urlToImage}}"></ion-img>
+                  </div>
+                  
+                  <ion-card-title class="title">{{article.title}}</ion-card-title>
+                  
+                </ion-card-content>
+                <ion-button ion-button fill="outline" href="{{article.url}}" large>阅读全文</ion-button>
+              </ion-card>
+            </ion-slide>
+  
+  
+            <!-- <ion-slide>
+              <ion-card class="category"  *ngFor="let article of articles">
+                <ion-card-content>
+                  <ion-card-header class="ion-text-center">
+                    <ion-icon src="assets/dish.svg"></ion-icon>
+                    <ion-card-title>{{article.title}}</ion-card-title>
+                    <ion-card-subtitle>Something here</ion-card-subtitle>
+                  </ion-card-header>
+                </ion-card-content>
+                
+              </ion-card>
+            </ion-slide> -->
+
+            <!-- <ion-slide>
+              <ion-card class="category" color="primary">
+                <ion-card-header class="ion-text-center">
+                  <ion-icon src="assets/cocktail.svg"></ion-icon>
+                  <ion-card-title>Drink</ion-card-title>
+                  <ion-card-subtitle>Something here</ion-card-subtitle>
+                </ion-card-header>
+              </ion-card>
+            </ion-slide> -->
+
+            <!-- <ion-slide>
+              <ion-card class="category" color="warning">
+                <ion-card-header class="ion-text-center">
+                  <ion-icon src="assets/burger.svg"></ion-icon>
+                  <ion-card-title>Burger</ion-card-title>
+                  <ion-card-subtitle>Something here</ion-card-subtitle>
+                </ion-card-header>
+              </ion-card>
+            </ion-slide> -->
+
+            <!-- <ion-slide>
+              <ion-card class="category" color="success">
+                <ion-card-header class="ion-text-center">
+                  <ion-icon src="assets/pizza.svg"></ion-icon>
+                  <ion-card-title>Pizza</ion-card-title>
+                  <ion-card-subtitle>Something here</ion-card-subtitle>
+                </ion-card-header>
+              </ion-card>
+            </ion-slide> -->
+
+            <!-- <ion-slide>
+              <ion-card class="category" color="tertiary">
+                <ion-card-header class="ion-text-center">
+                  <ion-icon src="assets/taco.svg"></ion-icon>
+                  <ion-card-title>Mexican</ion-card-title>
+                  <ion-card-subtitle>Something here</ion-card-subtitle>
+                </ion-card-header>
+              </ion-card>
+            </ion-slide> -->
+
+            <!-- <ion-slide>
+              <ion-card class="category" color="danger">
+                <ion-card-header class="ion-text-center">
+                  <ion-icon src="assets/cookies.svg"></ion-icon>
+                  <ion-card-title>Dessert</ion-card-title>
+                  <ion-card-subtitle>Something here</ion-card-subtitle>
+                </ion-card-header>
+              </ion-card>
+            </ion-slide> -->
+
+            <!-- <ion-slide>
+              <ion-card class="category" color="secondary">
+                <ion-card-header class="ion-text-center">
+                  <ion-icon src="assets/noodle.svg"></ion-icon>
+                  <ion-card-title>Noodle</ion-card-title>
+                  <ion-card-subtitle>Something here</ion-card-subtitle>
+                </ion-card-header>
+              </ion-card>
+            </ion-slide> -->
+
+            
+
+            
+  
+          </ion-slides>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="ion-padding-horizontal wrapper">
+    
+      <ion-grid class="ion-no-padding">
+        <ion-row class="ion-align-items-baseline">
+          <ion-col size="6">
+            <h4 class="title">
+              Recommended Video
+            </h4>
+          </ion-col>
+          <ion-col size="6">
+            <h4 class="more ion-text-end">
+              Show more
+            </h4>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    
+      </div>
+    
+      <ion-grid class="ion-no-padding">
+        <ion-row>
+          <ion-col size="12">
+            <ion-slides [options]="options1">
+    
+              <ion-slide>
+                <ion-card class="card">
+                  <ion-card-content class="ion-text-left">
+    
+                    <div class="img-wrapper">
+                      <ion-img src="https://images.pexels.com/photos/109275/pexels-photo-109275.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"></ion-img>
+                    </div>
+                    
+                    <ion-card-title class="title">Some Awesome Title</ion-card-title>
+                    <ion-card-subtitle>Some description here</ion-card-subtitle>
+                    <ion-card-subtitle>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </ion-card-subtitle>
+                  </ion-card-content>
+                </ion-card>
+              </ion-slide>
+    
+              <ion-slide>
+                <ion-card class="card">
+                  <ion-card-content class="ion-text-left">
+    
+                    <div class="img-wrapper">
+                      <ion-img src="https://images.pexels.com/photos/616840/pexels-photo-616840.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"></ion-img>
+                    </div>
+                    
+                    <ion-card-title class="title">Some Awesome Title</ion-card-title>
+                    <ion-card-subtitle>Some description here</ion-card-subtitle>
+                    <ion-card-subtitle>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </ion-card-subtitle>
+                  </ion-card-content>
+                </ion-card>
+              </ion-slide>
+    
+              <ion-slide>
+                <ion-card class="card">
+                  <ion-card-content class="ion-text-left">
+    
+                    <div class="img-wrapper">
+                      <ion-img src="https://images.pexels.com/photos/1437629/pexels-photo-1437629.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"></ion-img>
+                    </div>
+                    
+                    <ion-card-title class="title">Some Awesome Title</ion-card-title>
+                    <ion-card-subtitle>Some description here</ion-card-subtitle>
+                    <ion-card-subtitle>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half"></ion-icon>
+                    </ion-card-subtitle>
+                  </ion-card-content>
+                </ion-card>
+              </ion-slide>
+    
+            </ion-slides>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    
+      <div class="ion-padding">
+        <ion-row>
+          <ion-col size="6">
+            <ion-badge color="light" class="ion-margin-end">
+              <!-- Habib Dev. -->
+            </ion-badge>
+          </ion-col>
+          <ion-col size="6" class="ion-text-end">
+            <ion-badge color="light">
+              <!-- habib.al-mawali.com -->
+            </ion-badge>
+          </ion-col>
+        </ion-row>
+      </div>
+
+</ion-content>
